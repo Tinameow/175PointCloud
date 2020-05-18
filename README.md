@@ -14,9 +14,14 @@ upload TDS_utils and Modelnet data folder (please extract to folders) to your go
 run data_exploration.ipynb on your google colab; if cell 1 gives error, change os.chdir() to an appropriate directory
 
 -/175PointCloud
+
 |
+
 |--/TDS_utils.py
+
 |--/Modelnet10
+
 |--/Modelnet40
+
 
 2020/5/18 Yiming Lin
