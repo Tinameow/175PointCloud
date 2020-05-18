@@ -9,7 +9,7 @@ Related online resources:
 
 [Deep Learning on Point clouds: Implementing PointNet in Google Colab](https://towardsdatascience.com/deep-learning-on-point-clouds-implementing-pointnet-in-google-colab-1fd65cd3a263)
 
-#Data exploration.ipynb and TDS_utils
+# Data exploration.ipynb and TDS_utils:
 upload TDS_utils and Modelnet data folder (please extract to folders) to your google drive
 run data_exploration.ipynb on your google colab; if cell 1 gives error, change os.chdir() to an appropriate directory
 
