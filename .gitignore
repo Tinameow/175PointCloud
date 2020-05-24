@@ -1,2 +1,5 @@
+
+*.off
+*.pyc
 *.zip
 *.DS_Store
