@@ -9,19 +9,32 @@ Related online resources:
 
 [Deep Learning on Point clouds: Implementing PointNet in Google Colab](https://towardsdatascience.com/deep-learning-on-point-clouds-implementing-pointnet-in-google-colab-1fd65cd3a263)
 
-# Data exploration.ipynb and TDS_utils:
-upload TDS_utils and Modelnet data folder (please extract to folders) to your google drive
-run data_exploration.ipynb on your google colab; if cell 1 gives error, change os.chdir() to an appropriate directory
+## setup in Google Drive
+#First, download, extract zip, and upload ModelNet10 or ModelNet40 folder to your google drive
 
--/175PointCloud
+#Mount your google drive
 
-|
+from google.colab import drive
 
-|--/TDS_utils.py
+drive.mount('/content/drive')
 
-|--/Modelnet10
+import os
 
-|--/Modelnet40
+#Change to your google drive directory
+
+os.chdir('./drive/My Drive/175PointCloud')
+
+os.listdir()
 
 
-2020/5/18 Yiming Lin
+#This will make a new directory in your google drive, called 175PointCloud
+
+#delete your previous 175PointCloud folder if needed.
+
+!git clone https://github.com/Tinameow/175PointCloud.git
+
+
+
+#This will MOVE the ModelNet10 folder to the corresponding directory
+
+!mv ModelNet10 175PointCloud/Data
