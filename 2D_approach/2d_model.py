@@ -1,4 +1,5 @@
 from model_utils import *
+# TODO: make it use the utils
 
 
 def check_accuracy(model, loader):
@@ -16,7 +17,7 @@ def check_accuracy(model, loader):
     print('Got %d / %d correct (%.2f)' % (num_correct, num_samples, 100 * acc))
     return acc
 
-
+# TODO: make filename a parameter
 def train(model, loss_fn, optimizer, train_loader, val_loader, num_epochs=1, save=False):
     scheduler = ReduceLROnPlateau(optimizer, 'max', verbose=1, patience=3)
 
@@ -42,7 +43,7 @@ def train(model, loss_fn, optimizer, train_loader, val_loader, num_epochs=1, sav
         if save:
             torch.save(model.state_dict(), "save_" + str(epoch) + ".pth")
 
-
+# Todo: make the model a seperate file; may pass different ConvOneView to extract features
 class ConvOneView(nn.Module):
     def __init__(self):
         '''extracting features from single view'''
@@ -82,16 +83,16 @@ class CombineMultiView(nn.Module):
 
     def forward(self, input):
         # print(list(input[:,0,:,:][:,None,:,:].size()))
-        layer1 = self.conv1(input[:, 0, :, :][:, None, :, :])
-        layer2 = self.conv1(input[:, 1, :, :][:, None, :, :])
-        layer3 = self.conv1(input[:, 2, :, :][:, None, :, :])
+        n = list(input.size())[1]
+        layers = []
+        for i in range(n):
+            layer = self.conv1(input[:, i, :, :][:, None, :, :])
+            layers.append(layer)
 
-        xb = nn.MaxPool1d(3)(torch.stack((layer1, layer2, layer3), 2))
+        xb = nn.MaxPool1d(n)(torch.stack(layers, 2))
         # print(list(xb.size()))
 
         output = nn.Flatten(1)(xb)
-
-
 
         return output
 
@@ -117,8 +118,9 @@ class MVNet(nn.Module):
         return self.logsoftmax(output)
 
 if __name__ == '__main__':
+    # TODO: make it pass by argument (-cams cams.txt)
     cam1 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 2, 0]]).T, R=makerotation(90, 0, 0))
-    cam2 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[2, 0, 0]]).T, R=makerotation(0, 90, 0))
+    cam2 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[2, 0, 0]]).T, R=makerotation(0, 90, 0)@makerotation(0, 0, 270))
     cam3 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 0, 2]]).T, R=makerotation(180, 0, 0))
     cams = [cam1, cam2, cam3]
 
@@ -155,4 +157,4 @@ if __name__ == '__main__':
     train_loader = DataLoader(dataset=train_ds, batch_size=32, shuffle=True)
     valid_loader = DataLoader(dataset=valid_ds, batch_size=64)
 
-    train(pointnet, loss_fn, optimizer, train_loader, valid_loader, num_epochs=50, save=False)
+    train(pointnet, loss_fn, optimizer, train_loader, valid_loader, num_epochs=50, save=True)
