@@ -2,33 +2,10 @@ import numpy as np
 import math
 import random
 import os
+from torch.utils.data import Dataset
 import torch
-import scipy.spatial.distance
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms, utils
-
-import plotly.graph_objects as go
-import plotly.express as px
-
-##
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-import matplotlib.cm as cm
-
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torch.autograd import Variable
-from torch.utils.data import DataLoader
-from torch.utils.data import sampler
-
-import torchvision.datasets as dset
-import torchvision.transforms as T
-
-from torch.optim.lr_scheduler import ReduceLROnPlateau
-
-
 from path import Path
+from torchvision import transforms, utils
 
 path = Path("../Data/ModelNet10")
 folders = [dir for dir in sorted(os.listdir(path)) if os.path.isdir(path/dir)]
@@ -225,8 +202,8 @@ class create_data_point(object):
         for i in range(n):
             ind = self.cams[i].project(pointcloud.T).astype(int).T
             for k, j in ind:
-                pts2[i, j, k] += 1
-
+                if 0 <= k < 32 and 0 <= j < 32:
+                    pts2[i, j, k] += 1
         pts2 /= np.max(pts2)
         return pts2
 
@@ -269,3 +246,46 @@ class PointCloudData(Dataset):
 class ToTensor(object):
     def __call__(self, pointcloud):
         return torch.from_numpy(pointcloud)
+
+
+def get_cams(c: str):
+    if c == "4cams":
+        cam1 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 2, 0]]).T, R=makerotation(90, 0, 0))
+        cam2 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[2, 0, 0]]).T,
+                      R=makerotation(0, 90, 0) @ makerotation(0, 0, 270))
+        cam3 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 0, 2]]).T, R=makerotation(180, 0, 0))
+        cam4 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[1.4, 1.4, 1.4]]).T, R=makerotation(-45, -45, 0))
+        # cam4 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[1.4, 1.4, 1.4]]).T, R=makerotation(135, 0, -45))
+        cams = [cam1, cam2, cam3, cam4]
+        return cams
+
+    if c == "4camsup":
+        cam1 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 1.4, 1.4]]).T, R=makerotation(135, 0, 0))
+        cam2 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[1.4, 0, 1.4]]).T,
+                      R=makerotation(0, 135, 0) @ makerotation(0, 0, 270))
+        cam3 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[-1.4, 0, 1.4]]).T,
+                      R=makerotation(0, 225, 0) @ makerotation(0, 0, 90))
+        cam4 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, -1.4, 1.4]]).T,
+                      R=makerotation(225, 0, 0) @ makerotation(0, 0, 180))
+        cams = [cam1, cam2, cam3, cam4]
+        return cams
+
+    if c == "6cams":
+        cam1 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 2, 0]]).T, R=makerotation(90, 0, 0))
+        cam2 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[2, 0, 0]]).T,
+                      R=makerotation(0, 90, 0) @ makerotation(0, 0, 270))
+        cam3 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 0, 2]]).T, R=makerotation(180, 0, 0))
+        cam4 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[1.4, 1.4, 0]]).T, R=makerotation(90, 0, -45))
+        cam5 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 1.4, 1.4]]).T, R=makerotation(-225, 0, 0))
+        cam6 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[1.4, 0, 1.4]]).T,
+                      R=makerotation(0, -225, 0) @ makerotation(0, 0, 270))
+        cams = [cam1, cam2, cam3, cam4, cam5, cam6]
+        return cams
+
+    if c == "3cams":
+        cam1 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 2, 0]]).T, R=makerotation(90, 0, 0))
+        cam2 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[2, 0, 0]]).T,
+                      R=makerotation(0, 90, 0) @ makerotation(0, 0, 270))
+        cam3 = Camera(f=25, c=np.array([[16, 16]]).T, t=np.array([[0, 0, 2]]).T, R=makerotation(180, 0, 0))
+        cams = [cam1, cam2, cam3]
+        return cams

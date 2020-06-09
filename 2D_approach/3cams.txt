@@ -1,0 +1,735 @@
+Starting epoch 1 / 50
+loss = 0.9392
+loss = 1.2346
+loss = 1.1405
+loss = 1.8276
+loss = 1.4769
+loss = 1.5442
+loss = 0.6561
+loss = 1.1725
+loss = 1.5412
+loss = 0.6251
+loss = 0.8161
+loss = 0.9907
+Got 600 / 908 correct (66.08)
+Starting epoch 2 / 50
+loss = 0.5187
+loss = 1.1819
+loss = 0.8975
+loss = 0.4353
+loss = 0.5527
+loss = 0.4383
+loss = 1.3535
+loss = 0.5804
+loss = 0.7540
+loss = 0.4419
+loss = 0.4123
+loss = 0.3810
+Got 664 / 908 correct (73.13)
+Starting epoch 3 / 50
+loss = 0.5551
+loss = 0.7027
+loss = 0.6473
+loss = 0.6403
+loss = 0.5556
+loss = 0.4134
+loss = 0.3838
+loss = 0.4997
+loss = 0.4376
+loss = 1.0865
+loss = 0.4022
+loss = 1.0924
+Got 702 / 908 correct (77.31)
+Starting epoch 4 / 50
+loss = 0.3280
+loss = 0.4454
+loss = 0.1928
+loss = 0.3712
+loss = 0.3972
+loss = 0.6307
+loss = 0.2598
+loss = 0.1764
+loss = 0.3225
+loss = 0.2059
+loss = 0.6165
+loss = 0.4219
+Got 626 / 908 correct (68.94)
+Starting epoch 5 / 50
+loss = 0.8438
+loss = 0.5846
+loss = 0.4562
+loss = 0.4947
+loss = 0.4381
+loss = 0.4408
+loss = 0.2768
+loss = 0.3652
+loss = 0.1694
+loss = 0.2093
+loss = 0.4484
+loss = 0.4974
+Got 671 / 908 correct (73.90)
+Starting epoch 6 / 50
+loss = 0.2063
+loss = 0.4840
+loss = 0.5452
+loss = 0.3586
+loss = 0.4227
+loss = 0.3612
+loss = 0.4581
+loss = 0.4659
+loss = 0.2606
+loss = 0.4213
+loss = 0.3038
+loss = 0.7479
+Got 691 / 908 correct (76.10)
+Starting epoch 7 / 50
+loss = 0.4322
+loss = 0.2503
+loss = 0.1645
+loss = 0.2945
+loss = 0.3190
+loss = 0.3529
+loss = 0.3116
+loss = 0.7018
+loss = 0.3681
+loss = 0.3924
+loss = 0.2301
+loss = 0.4957
+Got 675 / 908 correct (74.34)
+Epoch     7: reducing learning rate of group 0 to 1.0000e-02.
+Starting epoch 8 / 50
+loss = 0.2024
+loss = 0.1376
+loss = 0.1857
+loss = 0.1362
+loss = 0.1448
+loss = 0.3483
+loss = 0.2776
+loss = 0.3294
+loss = 0.1785
+loss = 0.4016
+loss = 0.2634
+loss = 0.4243
+Got 716 / 908 correct (78.85)
+Starting epoch 9 / 50
+loss = 0.1853
+loss = 0.1523
+loss = 0.4199
+loss = 0.1412
+loss = 0.3132
+loss = 0.1348
+loss = 0.2286
+loss = 0.0846
+loss = 0.0957
+loss = 0.3279
+loss = 0.1428
+loss = 0.2012
+Got 697 / 908 correct (76.76)
+Starting epoch 10 / 50
+loss = 0.2121
+loss = 0.2227
+loss = 0.1922
+loss = 0.1167
+loss = 0.2333
+loss = 0.2998
+loss = 0.1794
+loss = 0.3249
+loss = 0.3875
+loss = 0.1392
+loss = 0.1371
+loss = 0.1975
+Got 703 / 908 correct (77.42)
+Starting epoch 11 / 50
+loss = 0.1575
+loss = 0.2635
+loss = 0.3284
+loss = 0.1814
+loss = 0.1076
+loss = 0.1967
+loss = 0.1673
+loss = 0.2681
+loss = 0.2305
+loss = 0.1928
+loss = 0.2517
+loss = 0.1498
+Got 687 / 908 correct (75.66)
+Starting epoch 12 / 50
+loss = 0.1264
+loss = 0.3173
+loss = 0.2694
+loss = 0.3254
+loss = 0.1506
+loss = 0.1977
+loss = 0.1472
+loss = 0.1946
+loss = 0.3013
+loss = 0.3203
+loss = 0.1539
+loss = 0.2546
+Got 734 / 908 correct (80.84)
+Starting epoch 13 / 50
+loss = 0.2715
+loss = 0.2195
+loss = 0.2677
+loss = 0.5656
+loss = 0.1954
+loss = 0.2542
+loss = 0.1516
+loss = 0.0571
+loss = 0.2168
+loss = 0.1220
+loss = 0.0852
+loss = 0.1669
+Got 732 / 908 correct (80.62)
+Starting epoch 14 / 50
+loss = 0.2548
+loss = 0.3177
+loss = 0.0893
+loss = 0.1778
+loss = 0.1953
+loss = 0.1398
+loss = 0.1352
+loss = 0.3483
+loss = 0.2254
+loss = 0.3076
+loss = 0.3482
+loss = 0.0882
+Got 753 / 908 correct (82.93)
+Starting epoch 15 / 50
+loss = 0.1835
+loss = 0.3453
+loss = 0.1053
+loss = 0.1732
+loss = 0.1538
+loss = 0.2301
+loss = 0.2797
+loss = 0.2795
+loss = 0.0380
+loss = 0.1089
+loss = 0.2443
+loss = 0.1944
+Got 744 / 908 correct (81.94)
+Starting epoch 16 / 50
+loss = 0.3469
+loss = 0.2211
+loss = 0.3350
+loss = 0.1879
+loss = 0.1387
+loss = 0.5567
+loss = 0.1461
+loss = 0.1261
+loss = 0.1769
+loss = 0.3002
+loss = 0.1635
+loss = 0.3122
+Got 714 / 908 correct (78.63)
+Starting epoch 17 / 50
+loss = 0.2780
+loss = 0.3425
+loss = 0.2646
+loss = 0.1116
+loss = 0.2664
+loss = 0.1108
+loss = 0.2118
+loss = 0.2216
+loss = 0.1163
+loss = 0.3411
+loss = 0.1927
+loss = 0.0850
+Got 747 / 908 correct (82.27)
+Starting epoch 18 / 50
+loss = 0.2617
+loss = 0.1719
+loss = 0.1787
+loss = 0.0813
+loss = 0.0755
+loss = 0.1406
+loss = 0.1566
+loss = 0.1565
+loss = 0.3574
+loss = 0.1315
+loss = 0.1146
+loss = 0.1960
+Got 739 / 908 correct (81.39)
+Epoch    18: reducing learning rate of group 0 to 1.0000e-03.
+Starting epoch 19 / 50
+loss = 0.0987
+loss = 0.2431
+loss = 0.4310
+loss = 0.1005
+loss = 0.0583
+loss = 0.1527
+loss = 0.2861
+loss = 0.3572
+loss = 0.1940
+loss = 0.2339
+loss = 0.0491
+loss = 0.0742
+Got 764 / 908 correct (84.14)
+Starting epoch 20 / 50
+loss = 0.1724
+loss = 0.2309
+
+Starting epoch 1 / 50
+loss = 0.2882
+loss = 0.1620
+loss = 0.2154
+loss = 0.3207
+loss = 0.2819
+loss = 0.1710
+loss = 0.5302
+loss = 0.5654
+loss = 0.3025
+loss = 0.1833
+loss = 0.6169
+loss = 0.3591
+Got 665 / 908 correct (73.24)
+Starting epoch 2 / 50
+loss = 0.3633
+loss = 0.1565
+loss = 0.1783
+loss = 0.4773
+loss = 0.3910
+loss = 0.4503
+loss = 0.2565
+loss = 0.3356
+loss = 0.5494
+loss = 0.4255
+loss = 0.2128
+loss = 0.3058
+Got 697 / 908 correct (76.76)
+Starting epoch 3 / 50
+loss = 0.3989
+loss = 0.4293
+loss = 0.1240
+loss = 0.1470
+loss = 0.2930
+loss = 0.1007
+loss = 0.4137
+loss = 0.6531
+loss = 0.3627
+loss = 0.2637
+loss = 0.2206
+loss = 0.4308
+Got 676 / 908 correct (74.45)
+Starting epoch 4 / 50
+loss = 0.2846
+loss = 0.2242
+loss = 0.2897
+loss = 0.1773
+loss = 0.1851
+loss = 0.1689
+loss = 0.1614
+loss = 0.3826
+loss = 0.2475
+loss = 0.4810
+loss = 0.2615
+loss = 0.2060
+Got 710 / 908 correct (78.19)
+Starting epoch 5 / 50
+loss = 0.2398
+loss = 0.3931
+loss = 0.3192
+loss = 0.5200
+loss = 0.1253
+loss = 0.2162
+loss = 0.3511
+loss = 0.2940
+loss = 0.3068
+loss = 0.5364
+loss = 0.2900
+loss = 0.1606
+Got 674 / 908 correct (74.23)
+Starting epoch 6 / 50
+loss = 0.2664
+loss = 0.0890
+loss = 0.1968
+loss = 0.2379
+loss = 0.2984
+loss = 0.6670
+loss = 0.2346
+loss = 0.2326
+loss = 0.2190
+loss = 0.2980
+loss = 0.1287
+loss = 0.2576
+Got 700 / 908 correct (77.09)
+Starting epoch 7 / 50
+loss = 0.2408
+loss = 0.2023
+loss = 0.4505
+loss = 0.4333
+loss = 0.2146
+loss = 0.2954
+loss = 0.3053
+loss = 0.3395
+loss = 0.2553
+loss = 0.2529
+loss = 0.4560
+loss = 0.3887
+Got 664 / 908 correct (73.13)
+Starting epoch 8 / 50
+loss = 0.1230
+loss = 0.2208
+loss = 0.1332
+loss = 0.1090
+loss = 0.8172
+loss = 0.1726
+loss = 0.4286
+loss = 0.0391
+loss = 0.2531
+loss = 0.0956
+loss = 0.2146
+loss = 0.2290
+Got 733 / 908 correct (80.73)
+Starting epoch 9 / 50
+loss = 0.3535
+loss = 0.4007
+loss = 0.1984
+loss = 0.3693
+loss = 0.1277
+loss = 0.0694
+loss = 0.0443
+loss = 0.2403
+loss = 0.2364
+loss = 0.3504
+loss = 0.2020
+loss = 0.1916
+Got 742 / 908 correct (81.72)
+Starting epoch 10 / 50
+loss = 0.1351
+loss = 0.0557
+loss = 0.3820
+loss = 0.1001
+loss = 0.2651
+loss = 0.0946
+loss = 0.2711
+loss = 0.7219
+loss = 0.4721
+loss = 0.4667
+loss = 0.3485
+loss = 0.1592
+Got 734 / 908 correct (80.84)
+Starting epoch 11 / 50
+loss = 0.1325
+loss = 0.1495
+loss = 0.3949
+loss = 0.1928
+loss = 0.0713
+loss = 0.3015
+loss = 0.3311
+loss = 0.3225
+loss = 0.2330
+loss = 0.2512
+loss = 0.1030
+loss = 0.1318
+Got 723 / 908 correct (79.63)
+Starting epoch 12 / 50
+loss = 0.4407
+loss = 0.0933
+loss = 0.1530
+loss = 0.1495
+loss = 0.1624
+loss = 0.0797
+loss = 0.1853
+loss = 0.0216
+loss = 0.3770
+loss = 0.1139
+loss = 0.1322
+loss = 0.5107
+Got 710 / 908 correct (78.19)
+Starting epoch 13 / 50
+loss = 0.1661
+loss = 0.1173
+loss = 0.0727
+loss = 0.0924
+loss = 0.1186
+loss = 0.0962
+loss = 0.2261
+loss = 0.1079
+loss = 0.2734
+loss = 0.2079
+loss = 0.0624
+loss = 0.2748
+Got 747 / 908 correct (82.27)
+Starting epoch 14 / 50
+loss = 0.0815
+loss = 0.4014
+loss = 0.0937
+loss = 0.3061
+loss = 0.1850
+loss = 0.1858
+loss = 0.0687
+loss = 0.1332
+loss = 0.4058
+loss = 0.1862
+loss = 0.2106
+loss = 0.1339
+Got 768 / 908 correct (84.58)
+Starting epoch 15 / 50
+loss = 0.2148
+loss = 0.1927
+loss = 0.0773
+loss = 0.1355
+loss = 0.0883
+loss = 0.2098
+loss = 0.0514
+loss = 0.1101
+loss = 0.2045
+loss = 0.0782
+loss = 0.4773
+loss = 0.2431
+Got 750 / 908 correct (82.60)
+Starting epoch 16 / 50
+loss = 0.3019
+loss = 0.1111
+loss = 0.0759
+loss = 0.4002
+loss = 0.1447
+loss = 0.0899
+loss = 0.1521
+loss = 0.4962
+loss = 0.2261
+loss = 0.0855
+loss = 0.0388
+loss = 0.0553
+Got 769 / 908 correct (84.69)
+Starting epoch 17 / 50
+loss = 0.1547
+loss = 0.1348
+loss = 0.2041
+loss = 0.1879
+loss = 0.0644
+loss = 0.1207
+loss = 0.1187
+loss = 0.2901
+loss = 0.1919
+loss = 0.1642
+loss = 0.1175
+loss = 0.1106
+Got 803 / 908 correct (88.44)
+Starting epoch 18 / 50
+loss = 0.0528
+loss = 0.2028
+loss = 0.2313
+loss = 0.2183
+loss = 0.1130
+loss = 0.3582
+loss = 0.1292
+loss = 0.4858
+loss = 0.1832
+loss = 0.4022
+loss = 0.1348
+loss = 0.1457
+Got 759 / 908 correct (83.59)
+Starting epoch 19 / 50
+loss = 0.1640
+loss = 0.0896
+loss = 0.0888
+loss = 0.0901
+loss = 0.0933
+loss = 0.0599
+loss = 0.0650
+loss = 0.1444
+loss = 0.1122
+loss = 0.0247
+loss = 0.2996
+loss = 0.3379
+Got 752 / 908 correct (82.82)
+Starting epoch 20 / 50
+loss = 0.0857
+loss = 0.0566
+loss = 0.1300
+loss = 0.1605
+loss = 0.0680
+loss = 0.1463
+loss = 0.0928
+loss = 0.1092
+loss = 0.0499
+loss = 0.1043
+loss = 0.0799
+loss = 0.3499
+Got 761 / 908 correct (83.81)
+Starting epoch 21 / 50
+loss = 0.3070
+loss = 0.2468
+loss = 0.0989
+loss = 0.1259
+loss = 0.2184
+loss = 0.2909
+loss = 0.1011
+loss = 0.0256
+loss = 0.3018
+loss = 0.0663
+loss = 0.1158
+loss = 0.2101
+Got 713 / 908 correct (78.52)
+Epoch    21: reducing learning rate of group 0 to 1.0000e-02.
+Starting epoch 22 / 50
+loss = 0.1591
+loss = 0.0298
+loss = 0.1470
+loss = 0.1274
+loss = 0.0989
+loss = 0.2328
+loss = 0.0934
+loss = 0.0903
+loss = 0.2920
+loss = 0.0927
+loss = 0.1100
+loss = 0.0123
+Got 769 / 908 correct (84.69)
+Starting epoch 23 / 50
+loss = 0.0303
+loss = 0.1665
+loss = 0.0871
+loss = 0.0625
+loss = 0.1703
+loss = 0.0885
+loss = 0.0507
+loss = 0.1716
+loss = 0.2836
+loss = 0.2213
+loss = 0.2218
+loss = 0.5149
+Got 784 / 908 correct (86.34)
+Starting epoch 24 / 50
+loss = 0.1480
+loss = 0.1901
+loss = 0.1656
+loss = 0.2726
+loss = 0.1314
+loss = 0.2352
+loss = 0.1546
+loss = 0.1305
+loss = 0.0398
+loss = 0.0350
+loss = 0.1552
+loss = 0.1308
+Got 779 / 908 correct (85.79)
+Starting epoch 25 / 50
+loss = 0.1161
+loss = 0.0386
+loss = 0.0509
+loss = 0.0939
+loss = 0.1634
+loss = 0.1536
+loss = 0.1006
+loss = 0.1734
+loss = 0.0114
+loss = 0.0243
+loss = 0.2728
+loss = 0.1021
+Got 771 / 908 correct (84.91)
+Epoch    25: reducing learning rate of group 0 to 1.0000e-03.
+Starting epoch 26 / 50
+loss = 0.2212
+
+Starting epoch 1 / 50
+loss = 0.1601
+loss = 0.0722
+loss = 0.2127
+loss = 0.0174
+loss = 0.1874
+loss = 0.2240
+loss = 0.1238
+loss = 0.0104
+loss = 0.0695
+loss = 0.0702
+loss = 0.0742
+loss = 0.1688
+Got 777 / 908 correct (85.57)
+Starting epoch 2 / 50
+loss = 0.1095
+loss = 0.1942
+loss = 0.0881
+loss = 0.0641
+loss = 0.0867
+loss = 0.0319
+loss = 0.0998
+loss = 0.3316
+loss = 0.1078
+loss = 0.0814
+loss = 0.0199
+loss = 0.1193
+Got 761 / 908 correct (83.81)
+Starting epoch 3 / 50
+loss = 0.1027
+loss = 0.1279
+loss = 0.2117
+loss = 0.1484
+loss = 0.4469
+loss = 0.1524
+loss = 0.0925
+loss = 0.1360
+loss = 0.0560
+loss = 0.1297
+loss = 0.5720
+loss = 0.2615
+Got 780 / 908 correct (85.90)
+Starting epoch 4 / 50
+loss = 0.0206
+loss = 0.0687
+loss = 0.3371
+loss = 0.1562
+loss = 0.1979
+loss = 0.1350
+loss = 0.2148
+loss = 0.2970
+loss = 0.0252
+loss = 0.1663
+loss = 0.0584
+loss = 0.0469
+Got 777 / 908 correct (85.57)
+Starting epoch 5 / 50
+loss = 0.1650
+loss = 0.1738
+loss = 0.2337
+loss = 0.0640
+loss = 0.0640
+loss = 0.1411
+loss = 0.0657
+loss = 0.0648
+loss = 0.1560
+loss = 0.2968
+loss = 0.0575
+loss = 0.0966
+Got 777 / 908 correct (85.57)
+Starting epoch 6 / 50
+loss = 0.2198
+loss = 0.1587
+loss = 0.0544
+loss = 0.1872
+loss = 0.1187
+loss = 0.0673
+loss = 0.1910
+loss = 0.0893
+loss = 0.3390
+loss = 0.1201
+loss = 0.0728
+loss = 0.3746
+Got 773 / 908 correct (85.13)
+Starting epoch 7 / 50
+loss = 0.0532
+loss = 0.1255
+loss = 0.0786
+loss = 0.0735
+loss = 0.0395
+loss = 0.0764
+loss = 0.0776
+loss = 0.1487
+loss = 0.0824
+loss = 0.0502
+loss = 0.1380
+loss = 0.2425
+Got 783 / 908 correct (86.23)
+Starting epoch 8 / 50
+loss = 0.0838
+loss = 0.3248
+loss = 0.0379
+loss = 0.0619
+loss = 0.0282
+loss = 0.0689
+loss = 0.0569
+loss = 0.0721
+loss = 0.0742

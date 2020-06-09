@@ -8,7 +8,6 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
-device = "cpu"
 
 def check_accuracy(model, loader, train = False):
     num_correct = 0
@@ -59,7 +58,7 @@ if __name__ == '__main__':
     cams = get_cams("4cams")
 
     train_transforms = transforms.Compose([
-        PointSampler(1024),
+        PointSampler(512),
         Normalize(),
         RandRotation_z(),
         RandomNoise(),
@@ -69,7 +68,7 @@ if __name__ == '__main__':
 
 
     default_transforms = transforms.Compose([
-            PointSampler(1024),
+            PointSampler(512),
             Normalize(),
             create_data_point(cams),
             ToTensor()
@@ -81,15 +80,12 @@ if __name__ == '__main__':
 
 
     pointnet = MVNet()
-    pointnet.load_state_dict(torch.load('save_v4_29_acc91.pth'))
-    # pointnet.load_state_dict(torch.load('cam4_conv_2.pth'))
     pointnet.to(device)
 
     loss_fn = nn.CrossEntropyLoss()
     optimizer = torch.optim.SGD(pointnet.parameters(), lr=0.1, momentum=0.9)
 
-    train_loader = DataLoader(dataset=train_ds, batch_size=32, shuffle=True, num_workers=4)
-    valid_loader = DataLoader(dataset=valid_ds, batch_size=64, num_workers=4)
+    train_loader = DataLoader(dataset=train_ds, batch_size=32, shuffle=True)
+    valid_loader = DataLoader(dataset=valid_ds, batch_size=64)
 
-    check_accuracy(pointnet, valid_loader)
-    # train(pointnet, loss_fn, optimizer, train_loader, valid_loader, num_epochs=50, save=True, filename="cam4_conv_")
+    train(pointnet, loss_fn, optimizer, train_loader, valid_loader, num_epochs=50, save=True, filename="cam4_512_")
