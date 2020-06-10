@@ -15,7 +15,7 @@ class modelnet_pc_dataset(torch.utils.data.Dataset):
     self.transforms=transforms
 
     folders = [dir for dir in sorted(os.listdir(directory)) if os.path.isdir(os.path.join(directory,dir))]
-    class_map = {folder: i for i, folder in enumerate(folders)};
+    self.class_map = {folder: i for i, folder in enumerate(folders)};
     
     self.files = []
     for class_folder in folders:
@@ -23,19 +23,19 @@ class modelnet_pc_dataset(torch.utils.data.Dataset):
         folder=directory+'/'+class_folder+"/test"
         for file_name in os.listdir(folder):
           file_directory = folder+'/'+file_name
-          self.files.append({'class':class_map[class_folder],'directory':file_directory})
+          self.files.append({'class':self.class_map[class_folder],'directory':file_directory})
       else:
         folder=directory+'/'+class_folder+"/train"
         file_names=sorted(os.listdir(folder))
         break_index=int(self.train_fraction*len(file_names))
         if type=="train":
-          for i in range(0,break_index):
+          for i in range(0,len(file_names)):
             file_directory = folder+'/'+file_names[i]
-            self.files.append({'class':class_map[class_folder],'directory':file_directory})
+            self.files.append({'class':self.class_map[class_folder],'directory':file_directory})
         elif type=="valid":
           for i in range(break_index,len(file_names)):
             file_directory = folder+'/'+file_names[i]
-            self.files.append({'class':class_map[class_folder],'directory':file_directory})
+            self.files.append({'class':self.class_map[class_folder],'directory':file_directory})
 
   def __getitem__(self, idx):
         dir = self.files[idx]['directory']
